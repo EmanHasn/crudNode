@@ -32,7 +32,9 @@ const writeToJson = (allData)=>{
 // List Users
 const ListUsers =()=>{
     const allData = ReadFromJson();
-    allData.forEach( ele=> console.log(`${ele.fname} ${ele.lname}`))
+    allData.forEach( ele=> {
+        console.log(` first name: ${ele.fname} -- age: ${ele.age} -- city: ${ele.city}`)}
+        )
 }
 
 //delete user

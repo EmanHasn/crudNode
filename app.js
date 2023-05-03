@@ -36,7 +36,7 @@ yargs.command({
         logicFun.addUser(dataFromJson.id, dataFromJson.fname , dataFromJson.lname , dataFromJson.age , dataFromJson.city)
     }
 })
-console.log(yargs.parse());
+// console.log(yargs.parse());
 
 //list User
 yargs.command({
@@ -63,7 +63,7 @@ yargs.command({
         logicFun.DelUser(dataFromJson.id)
     }
 })
-console.log(yargs.argv);
+// console.log(yargs.argv);
 
 //Read single User
 yargs.command({
@@ -80,7 +80,7 @@ yargs.command({
         logicFun.ReadUser(dataFromJson.id)
     }
 })
-console.log(yargs.argv);
+// console.log(yargs.argv);
 
 
 
