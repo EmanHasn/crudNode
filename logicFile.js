@@ -2,9 +2,7 @@ const fs = require('fs');
 
 const addUser = (id , fname , lname , age , city)=>{
     const allData = ReadFromJson();
-    const duplicated = allData.filter((ele)=>{
-        return ele.id === id;
-    })
+    const duplicated = allData.filter(ele=> ele.id === id)
     if(duplicated.length == 0){
     allData.push({
         id:id,
@@ -21,8 +19,7 @@ else{
 }
 const ReadFromJson = ()=>{
     try{
-        const readData = fs.readFileSync("data.json").toString();
-        return JSON.parse(readData)
+        return JSON.parse(fs.readFileSync("data.json").toString())
     }
     catch{
         return []
@@ -35,17 +32,13 @@ const writeToJson = (allData)=>{
 // List Users
 const ListUsers =()=>{
     const allData = ReadFromJson();
-    allData.forEach((ele)=>{
-        console.log(`${ele.fname} ${ele.lname}`)
-    })
+    allData.forEach( ele=> console.log(`${ele.fname} ${ele.lname}`))
 }
 
 //delete user
 const DelUser = (id)=>{
     const allData = ReadFromJson();
-    const remained = allData.filter((ele)=>{
-        return ele.id !== id;
-    })
+    const remained = allData.filter( ele=> ele.id !== id)
     writeToJson(remained)
 }
 
@@ -56,9 +49,11 @@ const ReadUser = (id)=>{
     console.log(singleUser)
 }
 
+
 module.exports = {
     addUser,
     ListUsers,
     DelUser,
-    ReadUser
+    ReadUser,
+    
 }

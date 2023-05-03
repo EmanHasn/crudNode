@@ -80,4 +80,7 @@ yargs.command({
         logicFun.ReadUser(dataFromJson.id)
     }
 })
-console.log(yargs.argv)
+console.log(yargs.argv);
+
+
+
