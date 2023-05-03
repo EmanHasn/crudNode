@@ -1,0 +1,4 @@
+add - اضافة بيانات 10 اشخاص - التكرار
+delete - حذف 4  (2-5-6-9)
+read by id قراءة 2(3-8)
+list for 10 (fname - age - city)
